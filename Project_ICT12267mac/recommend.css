@@ -1,0 +1,37 @@
+/* --- Recommend Page Styles --- */
+.page-header {
+    background: var(--bg-card);
+    padding: 60px 5%;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.page-header h1 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+.page-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+/* ทำให้แถบทางลัดติดหนึบ (Sticky) */
+.sticky-nav {
+    position: sticky;
+    top: var(--header-h);
+    background: var(--bg-card);
+    z-index: 100;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.recommend-block {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 140px; /* ระยะเว้นตอนกดลิงก์แล้วเด้งลงมา */
+}
+
+.block-header { margin-bottom: 30px; }
+.block-header h2 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 5px; }
+.block-header p { color: var(--text-light); font-size: 0.9rem; }
+
+/* ปรับแต่งปุ่มลิงก์ให้เหมือนปุ่มกด */
+.sort-btn {
+    display: inline-block;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+.sort-btn:hover { transform: scale(1.05); }
