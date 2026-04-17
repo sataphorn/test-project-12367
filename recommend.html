@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านอาหารแนะนำ - Foodie Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="recommend.css">
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header>
+    <a href="index.html" class="logo">Foodie Review</a>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">☰</label>
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="recommend.html" class="active">ร้านแนะนำ</a></li>
+            <li><a href="#">รีวิวร้านอาหาร</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        </ul>
+    </nav>
+    <div class="dark-mode-container">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle" class="dark-label"><span class="sun"></span><span class="moon"></span></label>
+    </div>
+</header>
+
+<!-- ======= RECOMMEND HEADER ======= -->
+<section class="page-header">
+    <h1>คัดมาแล้วว่า "เด็ด" 🏆</h1>
+    <p>รวมร้านอาหารทุกสไตล์ที่คุณไม่ควรพลาดในย่านฝั่งธน</p>
+</section>
+
+<main class="container">
+    <div class="content-left">
+        
+        <!-- แถบทางลัด (Anchor Links) -->
+        <div class="filter-bar sticky-nav">
+            <div class="filter-actions">
+                <span class="sort-label">ทางลัดไปที่:</span>
+                <div class="sort-buttons">
+                    <a href="#new-arrival" class="sort-btn active">✨ มาใหม่ล่าสุด</a>
+                    <a href="#top-rated" class="sort-btn">⭐ คะแนนสูงสุด</a>
+                    <a href="#popular-shops" class="sort-btn">🌟 ร้านยอดฮิต</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- บล็อก 1: มาใหม่ล่าสุด -->
+        <section id="new-arrival" class="recommend-block">
+            <div class="block-header">
+                <h2>✨ ร้านมาใหม่ล่าสุด</h2>
+                <p>อัปเดตเทรนด์ของอร่อยก่อนใครในย่านนี้</p>
+            </div>
+            <div class="card-grid">
+                <!-- ก๊อปปี้การ์ดร้านอาหารจากหน้าหลักมาวางที่นี่ได้เลยค่ะ -->
+                <article class="food-card"> <div class="card-img-container">
+                    <span class="category-badge">ส้มตำ / ยำ</span>
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="ส้มตำ" loading="lazy">
+                    <button class="wishlist-btn" onclick="toggleWish(this)" title="บันทึก">🤍</button>
+                </div>
+                <div class="card-info">
+                    <h3>กะปิส้มตำแซ่บ</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-light);font-size:0.75rem">(128 รีวิว)</span></p>
+                    <p class="location">📍 จรัญฯ 13 · <span class="open-badge">เปิดอยู่</span></p>
+                    <div class="card-footer">
+                        <span class="price-tag">เริ่ม <strong>50฿</strong></span>
+                        <a href="shop-detail.html" class="btn-read">อ่านรีวิว</a>
+                    </div>
+                </div>
+             </article>
+                <article class="food-card"> ... </article>
+            </div>
+        </section>
+
+        <!-- บล็อก 2: คะแนนสูงสุด -->
+        <section id="top-rated" class="recommend-block">
+            <div class="block-header">
+                <h2>⭐ ร้านคะแนนสูงสุด</h2>
+                <p>การันตีความอร่อยระดับ 5 ดาวจากนักชิมตัวจริง</p>
+            </div>
+            <div class="card-grid">
+                <article class="food-card"> ... </article>
+                <article class="food-card"> ... </article>
+            </div>
+        </section>
+
+        <!-- บล็อก 3: ร้านยอดฮิต -->
+        <section id="popular-shops" class="recommend-block">
+            <div class="block-header">
+                <h2>🌟 ร้านยอดฮิต</h2>
+                <p>ร้านยอดนิยมที่ใครๆ ก็ต้องไปเช็คอิน</p>
+            </div>
+            <div class="card-grid">
+                <article class="food-card"> ... </article>
+            </div>
+        </section>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-box">
+            <h3>📢 แนะนำร้านโปรด</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted)">มีร้านในใจอยากให้เราไปรีวิวไหม? ส่งข้อมูลมาได้เลย!</p>
+            <button class="btn-read" style="width:100%; margin-top:15px">ส่งข้อมูลร้าน</button>
+        </div>
+    </aside>
+</main>
+
+<!-- ======= FOOTER ======= -->
+<footer class="site-footer"> ... (ใช้ Footer เดิมจากหน้าหลัก) ... </footer>
+
+<script>
+// ก๊อปปี้สคริปต์ Dark Mode จากหน้าหลักมาใส่ตรงนี้ด้วยนะคะ
+</script>
+
+</body>
+</html>
